@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <title>Bootstrap 5 Layout</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css">
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg" style="background-color: #212128">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="color: #ffffff;">Pirate Cove</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" style="color: #ffffff;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="article.html" style="color: #ffffff;">Articles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: #ffffff;">Photos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- Article Content -->
+
+      <!-- Hero Section with Background Image -->
+      <header class="container my-4 p-5 text-center text-white">
+        <h1>It was a Dark and Stormy Night</h1>
+        <p>A tale from Capt. Crit 'Red Beard' McGillicutty</p>
+      </header>
+    
+<!-- Carousel -->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  
+  <div class="carousel-inner">
+    <div class="carousel-item active d-flex justify-content-center">
+      <img src="/img/kraken01.jpg" class="w-75" alt="kraken 1">
+    </div>
+    
+    <div class="carousel-item d-flex justify-content-center">
+      <img src="/img/kraken02.jpg" class="w-75" alt="kraken 2">
+    </div>
+    
+    <div class="carousel-item d-flex justify-content-center">
+      <img src="/img/kraken03.jpg" class="w-75" alt="kraken 3">
+    </div>
+  </div>
+  
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Footer -->
+<footer class="bg-white text-black text-center">
+  <p>Site by Kraken Industries</p>
+</footer>
+
+<!-- Bootstrap and Bootstrap Bundle JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Initialize the carousel
+  document.addEventListener("DOMContentLoaded", function() {
+    var element = document.getElementById("carouselExampleCaptions");
+    var myCarousel = new bootstrap.Carousel(element);
+  });
+
+  // jQuery function for custom buttons (if any)
+  $(document).ready(function() {
+    // Example button to go to next slide
+    $("#myBtn").click(function() {
+      $("#carouselExampleCaptions").carousel("next");
+    });
+    
+    // Example button to go to previous slide
+    $("#myPrevBtn").click(function() {
+      $("#carouselExampleCaptions").carousel("prev");
+    });
+  });
+</script>
+</body>      
+</html>
